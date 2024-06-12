@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Main Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .overlay {
+            position: relative;
+        }
+
+        .overlay::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            opacity: 0.8;
+            padding: 80px 60px;
+            border-radius: 10px;
+        }
+
+        a {
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            background-color: red;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home">
+        <div style="z-index: 100;" class="container">
+            
+            <div class="form">
+                <a href="login.html">Sign In</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

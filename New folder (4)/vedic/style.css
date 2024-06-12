@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Slab', serif;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.shadow{
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+.movie {
+    border-radius: 3px;
+    position: relative;
+    width: 300px;
+    padding: 10px;
+    z-index: 10;
+}
+.movie img{
+    width: 100%;
+    border-radius: 5px;
+}
+.movie-info {
+    color: black;  
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
