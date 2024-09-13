@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies | Gaming Website</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Movies">Movies</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="movies">
+            <h1>Movie List</h1>
+            <!-- Movies Grid -->
+            <div class="movies-grid">
+                <% if (movies && movies.length > 0) { %> <!-- Check if movies array exists and is not empty -->
+                    <% movies.forEach(movie => { %>
+                        <div class="movie">
+                            <img src="<%= movie.posterUrl %>" alt="<%= movie.title %> Poster">
+                            <div class="movie-title"><%= movie.title %></div>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>No movies available.</p>
+                <% } %>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gaming Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

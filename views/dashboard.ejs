@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Ensure you have a stylesheet for styling -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome, <%= user %></h1>
+            <form action="/logout" method="POST">
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
+        </div>
+
+        <h2>Featured Movies</h2>
+        <div class="movies">
+            <!-- Example movie entries -->
+            <div class="movie">
+                <img src="https://www.cinejosh.com/gallereys/movies/normal/gabbar_singh_movie_wallpapers_1504120616/gabbar_singh_movie_wallpapers_1504120616_01.jpg" alt="Movie 1">
+                <div class="movie-title">Gabbar Singh</div>
+            </div>
+            <div class="movie">
+                <img src="https://m.media-amazon.com/images/M/MV5BZWQzNDdmN2UtZTc5ZC00M2EzLWE2ZTUtMjVhNzJmOGQ5YzkwXkEyXkFqcGdeQXVyMzA0NTI2OTM@._V1_.jpg" alt="Movie 2">
+                <div class="movie-title">Atharintiki Daaredi</div>
+            </div>
+            <div class="movie">
+                <img src="https://static.toiimg.com/photo/65145005.cms " alt="Movie 3">
+                <div class="movie-title">kushi</div>
+            </div>
+            <!-- Add more movie entries as needed -->
+        </div>
+    </div>
+</body>
+</html>
